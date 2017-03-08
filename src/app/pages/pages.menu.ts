@@ -3,6 +3,37 @@ export const PAGES_MENU = [
     path: 'pages',
     children: [
       {
+        path: 'ticket',  // path for our page
+        data: { // custom menu declaration
+          menu: {
+            title: 'HelpDesk', // menu title
+            icon: 'ion-bug', // menu icon
+            pathMatch: 'prefix', // use it if item children not displayed in menu
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        },
+        children: [
+          {
+            path: '',
+            data: {
+              menu: {
+                title: 'All Tickets',
+              }
+            }
+          },
+          {
+            path: 'create',
+            data: {
+              menu: {
+                title: 'Create Ticket',
+              }
+            }
+          }
+        ]
+      },
+      {
         path: 'dashboard',
         data: {
           menu: {
